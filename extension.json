@@ -1,0 +1,88 @@
+{
+    "name": "Isekai VisualEditor SelectLicense",
+    "author": "Hyperzlib",
+    "version": "1.0.0",
+    "url": "https://github.com/Isekai-Project/mediawiki-extension-IsekaiVESelectLicense",
+    "descriptionmsg": "isekai-ve-selectlicense-desc",
+    "license-name": "MIT",
+    "type": "parserhook",
+    "MessagesDirs": {
+        "IsekaiVESelectLicense": [
+            "i18n"
+        ]
+    },
+    "AutoloadClasses": {
+        "Isekai\\VESelectLicense\\Hooks": "includes/Hooks.php"
+    },
+    "Hooks": {
+        "ResourceLoaderGetConfigVars": "Isekai\\VESelectLicense\\Hooks::setConfig"
+    },
+    "ResourceModules": {
+        "ve.ext.isekai.selectlicense": {
+            "scripts": [
+                "ve.dm.IsekaiLicenseMetaItem.js",
+                "ve.ui.IsekaiSelectLicensePage.js",
+                "ve.ui.IsekaiSelectLicenseDialogHelper.js",
+                "ve.ext.isekai.selectLicense.js"
+            ],
+            "styles": [
+                "ve.ext.isekai.selectLicense.less"
+            ],
+            "dependencies": [
+                "ext.visualEditor.mwcore",
+                "ext.visualEditor.mwmeta",
+                "ext.visualEditor.desktopArticleTarget"
+            ],
+            "targets": [
+                "desktop",
+                "mobile"
+            ],
+            "messages": [
+                "isekai-ve-selectlicense-desc",
+                "isekai-ve-selectlicense",
+                "isekai-ve-selectlicense-label",
+                "isekai-ve-selectlicense-defaultlicense",
+                "isekai-ve-selectlicense-field-label",
+                "isekai-ve-selectlicense-field-help",
+                "isekai-ve-selectlicense-useguide-label",
+                "isekai-ve-selectlicense-useguide-field-label",
+                "isekai-ve-selectlicense-useguide-field-help",
+                "isekai-ve-selectlicense-guide",
+                "isekai-ve-selectlicense-guide-novelstatus-field-label",
+                "isekai-ve-selectlicense-guide-novelstatus-field-help",
+                "isekai-ve-selectlicense-guide-novelstatus-option-publish",
+                "isekai-ve-selectlicense-guide-novelstatus-option-unpublish",
+                "isekai-ve-selectlicense-guide-allowremix-field-label",
+                "isekai-ve-selectlicense-guide-allowremix-field-help",
+                "isekai-ve-selectlicense-guide-allowremix-option-allow",
+                "isekai-ve-selectlicense-guide-allowremix-option-deny",
+                "isekai-ve-selectlicense-guide-allowremix-option-sharealike",
+                "isekai-ve-selectlicense-guide-result-field-label",
+                "isekai-ve-selectlicense-guide-apply-label",
+                "isekai-ve-selectlicense-guide-cancel-label",
+                "isekai-ve-selectlicense-guide-error",
+                "isekai-ve-selectlicense-tip-defaultlicense",
+                "isekai-ve-selectlicense-needattribution",
+                "isekai-ve-selectlicense-allowcommerce",
+                "isekai-ve-selectlicense-denycommerce",
+                "isekai-ve-selectlicense-allowadapt",
+                "isekai-ve-selectlicense-denyadapt",
+                "isekai-ve-selectlicense-sharealike",
+                "isekai-ve-selectlicense-license-cc-by",
+                "isekai-ve-selectlicense-license-cc-by-nd",
+                "isekai-ve-selectlicense-license-cc-by-sa",
+                "isekai-ve-selectlicense-license-cc-by-nc",
+                "isekai-ve-selectlicense-license-cc-by-nc-nd",
+                "isekai-ve-selectlicense-license-cc-by-nc-sa"
+            ]
+        }
+    },
+    "VisualEditorPluginModules": [
+        "ve.ext.isekai.selectlicense"
+    ],
+    "ResourceFileModulePaths": {
+        "localBasePath": "modules",
+        "remoteExtPath": "IsekaiVESelectLicense/modules"
+    },
+    "manifest_version": 1
+}

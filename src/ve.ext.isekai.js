@@ -1,0 +1,1 @@
+import './ve.ui.isekai.SuperscriptDialogTool';
