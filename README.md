@@ -1,6 +1,6 @@
 # Isekai SelectLicense VE extension
 # Installation
-this plugin require IsekaiSelectLicense extension. You can get it on [GitHub](https://github.com/Isekai-Project/mediawiki-extension-IsekaiSelectLicense).
+this plugin require IsekaiSelectLicense extension. You can get it on [GitHub Repo](https://github.com/Isekai-Project/mediawiki-extension-IsekaiSelectLicense).
 
 # Configure
 Please add Creativecommons License in LocalSettings.php
