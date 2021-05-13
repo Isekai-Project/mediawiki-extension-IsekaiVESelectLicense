@@ -2,7 +2,7 @@
     "name": "Isekai VisualEditor SelectLicense",
     "author": "Hyperzlib",
     "version": "1.0.0",
-    "url": "https://github.com/Isekai-Project/mediawiki-extension-IsekaiVESelectLicense",
+    "url": "https://www.isekai.cn",
     "descriptionmsg": "isekai-ve-selectlicense-desc",
     "license-name": "MIT",
     "type": "parserhook",
@@ -34,8 +34,7 @@
                 "ext.visualEditor.desktopArticleTarget"
             ],
             "targets": [
-                "desktop",
-                "mobile"
+                "desktop"
             ],
             "messages": [
                 "isekai-ve-selectlicense-desc",

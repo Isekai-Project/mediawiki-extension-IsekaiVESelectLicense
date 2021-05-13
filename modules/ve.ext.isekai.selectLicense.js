@@ -48,7 +48,12 @@ ve.ui.MWMetaDialog.prototype.extractValue = function(field) {
 };
 
 function getActionGroupId(name) {
-    var actionGroups = ve.init.mw.DesktopArticleTarget.static.actionGroups;
+    var actionGroups;
+    if('DesktopArticleTarget' in ve.init.mw){
+        actionGroups = ve.init.mw.DesktopArticleTarget.static.actionGroups;
+    } else if('MobileArticleTarget' in ve.init.mw) {
+        actionGroups = ve.init.mw.MobileArticleTarget.static.toolbarGroups;
+    }
     for (var i = 0; i < actionGroups.length; i++) {
         var one = actionGroups[i];
         if (one.name === name) {
@@ -65,6 +70,8 @@ function insertAfter(arr, item, after) {
 }
 
 //注入工具栏
-var pageMenuId = getActionGroupId('pageMenu');
-ve.init.mw.DesktopArticleTarget.static.actionGroups[pageMenuId].include =
-    insertAfter(ve.init.mw.DesktopArticleTarget.static.actionGroups[pageMenuId].include, 'selectLicense', 'templatesUsed');
+if('DesktopArticleTarget' in ve.init.mw){
+    var pageMenuId = getActionGroupId('pageMenu');
+    ve.init.mw.DesktopArticleTarget.static.actionGroups[pageMenuId].include =
+        insertAfter(ve.init.mw.DesktopArticleTarget.static.actionGroups[pageMenuId].include, 'selectLicense', 'templatesUsed');
+}
